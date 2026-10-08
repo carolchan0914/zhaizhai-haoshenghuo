@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>宅宅好生活｜陪你選好房，也選生活</title>
+<meta name="description" content="宅宅好生活｜陪你選好房，也選生活。青埔房地產買賣、看屋分享與生活提案，歡迎加入我們的臉書社團。">
+<meta property="og:title" content="宅宅好生活｜陪你選好房，也選生活">
+<meta property="og:description" content="青埔房地產買賣、看屋分享與生活提案，歡迎加入我們的臉書社團。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="assets/images/jen-yaqi.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%235E6B47'/%3E%3Ctext x='32' y='45' font-size='34' text-anchor='middle' fill='white' font-family='serif'%3E宅%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root { --accent: #5E6B47; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Noto Sans TC', 'PingFang TC', system-ui, sans-serif; background: #FBF7F1; }
+  a { color: #2A2420; }
+  a:hover { color: #C1623E; }
+  button:focus-visible, a:focus-visible { outline: 2px solid #C1623E; outline-offset: 2px; }
+  img { max-width: 100%; }
+  .toast { position: fixed; left: 50%; bottom: 28px; transform: translateX(-50%) translateY(16px); opacity: 0; transition: all .25s ease; pointer-events: none; z-index: 50; }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+</style>
+</head>
+<body>
+
+<div style="width: 100%; min-height: 100%; background: #FBF7F1; display: flex; flex-direction: column;">
+
+  <!-- Header -->
+  <header style="background: #FBF7F1; border-bottom: 1px solid #E6DCCB; position: sticky; top: 0; z-index: 40;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+      <a href="#top" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+        <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--accent); color: #FBF7F1; display: flex; align-items: center; justify-content: center; font-family: 'Noto Serif TC', serif; font-weight: 700; font-size: 20px; flex-shrink: 0;">宅</div>
+        <div style="display: flex; flex-direction: column; line-height: 1.25;">
+          <span style="font-family: 'Noto Serif TC', serif; font-weight: 700; font-size: 19px; color: #2A2420;">宅宅好生活</span>
+          <span style="font-size: 12px; color: #6B6158;">好好宅，好好生活</span>
+        </div>
+      </a>
+      <nav aria-label="主要導覽" style="display: flex; gap: 28px; flex-wrap: wrap;">
+        <a href="#fb-posts" style="font-size: 15px; text-decoration: none; font-weight: 500;">社團分享</a>
+        <a href="#listings" style="font-size: 15px; text-decoration: none; font-weight: 500;">物件分享</a>
+        <a href="#about" style="font-size: 15px; text-decoration: none; font-weight: 500;">關於我們</a>
+        <a href="#contact" style="font-size: 15px; text-decoration: none; font-weight: 500;">聯絡我們</a>
+      </nav>
+      <a href="#contact" style="background: var(--accent); color: #FFFFFF; padding: 10px 20px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 14px; white-space: nowrap;">預約賞屋</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" style="background: #F3ECE0;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: flex; align-items: center; gap: 56px; flex-wrap: wrap;">
+      <div style="flex: 1 1 420px; min-width: 280px; display: flex; flex-direction: column; gap: 20px;">
+        <span style="display: inline-flex; align-self: flex-start; background: #EEF0E5; color: #4F5C3A; font-size: 13px; font-weight: 700; padding: 6px 14px; border-radius: 999px;">買屋攻略 · 房市觀察 · 看屋分享 · 裝潢靈感 · 生活提案</span>
+        <h1 style="margin: 0; font-family: 'Noto Serif TC', serif; font-weight: 900; font-size: 44px; line-height: 1.3; color: #2A2420;">陪你選好房，<br>也選生活。</h1>
+        <p style="margin: 0; font-size: 17px; line-height: 1.8; color: #524A42; max-width: 480px;">找到喜歡的家，就是好生活的開始。宅宅好生活陪你從看屋、選房到成家，不只選房，更懂你找到理想日常。</p>
+        <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 8px;">
+          <a href="#listings" style="background: var(--accent); color: #FFFFFF; padding: 14px 28px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 15px;">看看最新物件</a>
+          <a href="https://www.facebook.com/groups/2076028257121447" target="_blank" rel="noopener noreferrer" style="background: transparent; border: 1.5px solid #D8CDB9; color: #2A2420; padding: 14px 28px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 15px;">加入宅宅好生活社團</a>
+        </div>
+      </div>
+      <div style="flex: 1 1 380px; min-width: 280px;">
+        <div role="img" aria-label="品牌主視覺／居家生活照片" style="width: 100%; aspect-ratio: 4 / 3; background: #E4D9C6; border-radius: 24px; display: flex; align-items: center; justify-content: center; color: #9C8F7A; font-size: 15px; font-weight: 500; border: 1px solid #D8CDB9; text-align: center; padding: 16px;">[品牌主視覺／居家生活照片]</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section style="background: #FBF7F1;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 40px 24px; display: flex; gap: 40px; flex-wrap: wrap; justify-content: space-between;">
+      <div style="display: flex; flex-direction: column; gap: 4px; min-width: 140px;">
+        <span style="font-family: 'Noto Serif TC', serif; font-weight: 900; font-size: 32px; color: var(--accent);">[●]年</span>
+        <span style="font-size: 14px; color: #6B6158;">深耕在地找房</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 4px; min-width: 140px;">
+        <span style="font-family: 'Noto Serif TC', serif; font-weight: 900; font-size: 32px; color: var(--accent);">[●●●]+</span>
+        <span style="font-size: 14px; color: #6B6158;">成功陪伴成交</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 4px; min-width: 140px;">
+        <span style="font-family: 'Noto Serif TC', serif; font-weight: 900; font-size: 32px; color: var(--accent);">[●●,●●●]</span>
+        <span style="font-size: 14px; color: #6B6158;">社團成員人數</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 4px; min-width: 140px;">
+        <span style="font-family: 'Noto Serif TC', serif; font-weight: 900; font-size: 32px; color: var(--accent);">[●●]%</span>
+        <span style="font-size: 14px; color: #6B6158;">老客戶回來推薦</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FB Posts -->
+  <section id="fb-posts" style="background: #F6F1E7; padding: 72px 0;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap;">
+        <div>
+          <h2 style="margin: 0 0 8px; font-family: 'Noto Serif TC', serif; font-weight: 700; font-size: 30px; color: #2A2420;">宅宅好生活・社團分享</h2>
+          <p style="margin: 0; color: #6B6158; font-size: 15px;">精選「宅宅好生活」臉書社團最新分享，點一下「分享」把喜歡的貼文傳給朋友</p>
+        </div>
+        <a href="https://www.facebook.com/groups/2076028257121447" target="_blank" rel="noopener noreferrer" style="font-size: 14px; font-weight: 700; color: #2A2420; border: 1.5px solid #D8CDB9; padding: 10px 18px; border-radius: 999px; text-decoration: none; white-space: nowrap;">前往臉書社團</a>
+      </div>
+      <p style="margin: 10px 0 28px; font-size: 13px; color: #A69A86;">＊以上 4 則皆取自「宅宅好生活」社團真實貼文摘錄；臉書社團沒有提供自動嵌入功能，請定期手動更新貼文內容</p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+
+        <!-- Post 1 -->
+        <div style="background: #FFFFFF; border: 1px solid #E6DCCB; border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <img src="assets/images/jen-yaqi.png" alt="詹雅淇" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; flex-shrink: 0;">
+            <div style="display: flex; flex-direction: column; line-height: 1.3;">
+              <span style="font-weight: 700; font-size: 14px; color: #2A2420;">詹雅淇 <span style="font-weight: 400; color: #A69A86;">· 宅宅好生活</span></span>
+              <span style="font-size: 12px; color: #A69A86;">2 小時前</span>
+            </div>
+            <span style="margin-left: auto; background: #F3E4DB; color: #A24F32; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; white-space: nowrap;">看屋分享</span>
+          </div>
+          <p style="margin: 0; font-size: 14.5px; line-height: 1.75; color: #3C3429;">頂樓好不好？昨天帶看一間頂樓的房子，跟客戶聊著聊著，她說現在住的房子也沒有不好，就是樓上住了一戶有小小孩的家庭，孩子還小，跑跳本來就很難約束，這是每個養過小孩的家庭都懂的難處。但對樓下的他們來說，那些跑跳尖叫聲，是每天、每個時段都要承受的日常……房子是空間，生活才是家的樣子。</p>
+          <div role="img" aria-label="貼文配圖" style="width: 100%; aspect-ratio: 16 / 10; background: #EFE7D8; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #A69A86; font-size: 13px;">[貼文配圖]</div>
+          <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 8px; border-top: 1px solid #F0E9DC;">
+            <div style="display: flex; gap: 16px; color: #8A7E6C; font-size: 13px;">
+              <span style="display: flex; align-items: center; gap: 6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path></svg>2</span>
+              <span style="display: flex; align-items: center; gap: 6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>0</span>
+            </div>
+            <div style="display: flex; gap: 10px;">
+              <a href="https://www.facebook.com/groups/2076028257121447" target="_blank" rel="noopener noreferrer" style="font-size: 13px; color: #6B6158; text-decoration: none; font-weight: 600;">查看原貼文</a>
+              <button type="button" onclick="shareLink('https://www.facebook.com/groups/2076028257121447', '貼文')" style="display: flex; align-items: center; gap: 6px; background: #F6F1E7; border: 1px solid #E6DCCB; color: #2A2420; font-size: 13px; font-weight: 700; padding: 7px 14px; border-radius: 999px; cursor: pointer;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.6" y1="10.6" x2="15.4" y2="6.4"></line><line x1="8.6" y1="13.4" x2="15.4" y2="17.6"></line></svg>分享</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post 2 -->
+        <div style="background: #FFFFFF; border: 1px solid #E6DCCB; border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <img src="assets/images/jen-yaqi.png" alt="詹雅淇" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; flex-shrink: 0;">
+            <div style="display: flex; flex-direction: column; line-height: 1.3;">
+              <span style="font-weight: 700; font-size: 14px; color: #2A2420;">詹雅淇 <span style="font-weight: 400; color: #A69A86;">· 宅宅好生活</span></span>
+              <span style="font-size: 12px; color: #A69A86;">4 天前</span>
+            </div>
+            <span style="margin-left: auto; background: #E7ECDD; color: #4F5C3A; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; white-space: nowrap;">房市觀察</span>
+          </div>
+          <p style="margin: 0; font-size: 14.5px; line-height: 1.75; color: #3C3429;">青埔高鐵站前，新地標正在成形。每天經過高鐵站前，看著工地一點一點長高，終於可以跟大家分享這兩棟的規劃了！這次是「停三 × 停四 BOT 案」，由桃園市政府與桃大建設體系合作開發，以後高鐵站前不只是轉乘的地方，而是可以吃飯、住宿、上班、辦事的生活中心……</p>
+          <div role="img" aria-label="貼文配圖" style="width: 100%; aspect-ratio: 16 / 10; background: #EFE7D8; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #A69A86; font-size: 13px;">[貼文配圖]</div>
+          <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 8px; border-top: 1px solid #F0E9DC;">
+            <div style="display: flex; gap: 16px; color: #8A7E6C; font-size: 13px;">
+              <span style="display: flex; align-items: center; gap: 6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path></svg>5</span>
+              <span style="display: flex; align-items: center; gap: 6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>1</span>
+            </div>
+            <div style="display: flex; gap: 10px;">
+              <a href="https://www.facebook.com/groups/2076028257121447" target="_blank" rel="noopener noreferrer" style="font-size: 13px; color: #6B6158; text-decoration: none; font-weight: 600;">查看原貼文</a>
+              <button type="button" onclick="shareLink('https://www.facebook.com/groups/2076028257121447', '貼文')" style="display: flex; align-items: center; gap: 6px; background: #F6F1E7; border: 1px solid #E6DCCB; color: #2A2420; font-size: 13px; font-weight: 700; padding: 7px 14px; border-radius: 999px; cursor: pointer;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.6" y1="10.6" x2="15.4" y2="6.4"></line><line x1="8.6" y1="13.4" x2="15.4" y2="17.6"></line></svg>分享</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post 3 -->
+        <div style="background: #FFFFFF; border: 1px solid #E6DCCB; border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <img src="assets/images/jen-yaqi.png" alt="詹雅淇" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; flex-shrink: 0;">
+            <div style="display: flex; flex-direction: column; line-height: 1.3;">
+              <span style="font-weight: 700; font-size: 14px; color: #2A2420;">詹雅淇 <span style="font-weight: 400; color: #A69A86;">· 宅宅好生活</span></span>
+              <span style="font-size: 12px; color: #A69A86;">6 天前</span>
+            </div>
+            <span style="margin-left: auto; background: #E3ECE9; color: #3E6459; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; white-space: nowrap;">裝潢靈感</span>
+          </div>
+          <p style="margin: 0; font-size: 14.5px; line-height: 1.75; color: #3C3429;">「全室除濕要十幾萬，真的比買幾台除濕機值得嗎？」最近跟同事聊到「全室除濕機」，一般除濕機最大的麻煩大家應該都懂，客廳除完推房間、房間除完推更衣室……然後水滿了，再倒。全室除濕就完全是另一個概念了……</p>
+          <div role="img" aria-label="貼文配圖" style="width: 100%; aspect-ratio: 16 / 10; background: #EFE7D8; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #A69A86; font-size: 13px;">[貼文配圖]</div>
+          <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 8px; border-top: 1px solid #F0E9DC;">
+            <div style="display: flex; gap: 16px; color: #8A7E6C; font-size: 13px;">
+              <span style="display: flex; align-items: center; gap: 6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path></svg>11</span>
+              <span style="display: flex; align-items: center; gap: 6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>10</span>
+            </div>
+            <div style="display: flex; gap: 10px;">
+              <a href="https://www.facebook.com/groups/2076028257121447" target="_blank" rel="noopener noreferrer" style="font-size: 13px; color: #6B6158; text-decoration: none; font-weight: 600;">查看原貼文</a>
+              <button type="button" onclick="shareLink('https://www.facebook.com/groups/2076028257121447', '貼文')" style="display: flex; align-items: center; gap: 6px; background: #F6F1E7; border: 1px solid #E6DCCB; color: #2A2420; font-size: 13px; font-weight: 700; padding: 7px 14px; border-radius: 999px; cursor: pointer;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.6" y1="10.6" x2="15.4" y2="6.4"></line><line x1="8.6" y1="13.4" x2="15.4" y2="17.6"></line></svg>分享</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post 4 -->
+        <div style="background: #FFFFFF; border: 1px solid #E6DCCB; border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <img src="assets/images/jen-yaqi.png" alt="詹雅淇" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; flex-shrink: 0;">
+            <div style="display: flex; flex-direction: column; line-height: 1.3;">
+              <span style="font-weight: 700; font-size: 14px; color: #2A2420;">詹雅淇 <span style="font-weight: 400; color: #A69A86;">· 宅宅好生活</span></span>
+              <span style="font-size: 12px; color: #A69A86;">近期</span>
+            </div>
+            <span style="margin-left: auto; background: #EFE4F0; color: #6A4C73; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; white-space: nowrap;">生活提案</span>
+          </div>
+          <p style="margin: 0; font-size: 14.5px; line-height: 1.75; color: #3C3429;">斷捨離最卡關的，往往不是捨不得，是「這是我花好多錢買的」。陪過幾次客戶整理東西時，發現一個很常見的卡關點：不是每件東西都有回憶、有感情，很多時候，真正讓人下不了手的一句話是……</p>
+          <div role="img" aria-label="貼文配圖" style="width: 100%; aspect-ratio: 16 / 10; background: #EFE7D8; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #A69A86; font-size: 13px;">[貼文配圖]</div>
+          <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 8px; border-top: 1px solid #F0E9DC;">
+            <div style="display: flex; gap: 16px; color: #8A7E6C; font-size: 13px;">
+              <span style="display: flex; align-items: center; gap: 6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path></svg>6</span>
+              <span style="display: flex; align-items: center; gap: 6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>0</span>
+            </div>
+            <div style="display: flex; gap: 10px;">
+              <a href="https://www.facebook.com/groups/2076028257121447" target="_blank" rel="noopener noreferrer" style="font-size: 13px; color: #6B6158; text-decoration: none; font-weight: 600;">查看原貼文</a>
+              <button type="button" onclick="shareLink('https://www.facebook.com/groups/2076028257121447', '貼文')" style="display: flex; align-items: center; gap: 6px; background: #F6F1E7; border: 1px solid #E6DCCB; color: #2A2420; font-size: 13px; font-weight: 700; padding: 7px 14px; border-radius: 999px; cursor: pointer;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.6" y1="10.6" x2="15.4" y2="6.4"></line><line x1="8.6" y1="13.4" x2="15.4" y2="17.6"></line></svg>分享</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Listings -->
+  <section id="listings" style="background: #FBF7F1; padding: 72px 0;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap;">
+        <div>
+          <h2 style="margin: 0 0 8px; font-family: 'Noto Serif TC', serif; font-weight: 700; font-size: 30px; color: #2A2420;">精選物件・分享給需要的人</h2>
+          <p style="margin: 0; color: #6B6158; font-size: 15px;">每一間都經過實際走訪，點「分享物件」把連結傳出去</p>
+        </div>
+        <a href="https://www.591.com.tw/" target="_blank" rel="noopener noreferrer" style="font-size: 14px; font-weight: 700; color: #2A2420; border: 1.5px solid #D8CDB9; padding: 10px 18px; border-radius: 999px; text-decoration: none; white-space: nowrap;">查看全部物件</a>
+      </div>
+      <p style="margin: 10px 0 28px; font-size: 13px; color: #A69A86;">＊以上物件資料取自 591 實際刊登內容，點「查看詳情」可前往 591 原頁面；照片因版權規定無法轉載，請換上自有拍攝或授權照片</p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+
+        <!-- Listing 1 -->
+        <div style="background: #FFFFFF; border: 1px solid #E6DCCB; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column;">
+          <div role="img" aria-label="物件照片" style="position: relative; width: 100%; aspect-ratio: 4 / 3; background: #E4D9C6; display: flex; align-items: center; justify-content: center; color: #9C8F7A; font-size: 13px;">
+            [物件照片]
+            <span style="position: absolute; top: 12px; left: 12px; background: #F6E9C9; color: #8C6D1F; font-size: 12px; font-weight: 700; padding: 5px 12px; border-radius: 999px;">降價</span>
+          </div>
+          <div style="padding: 20px; display: flex; flex-direction: column; gap: 10px; flex: 1;">
+            <h3 style="margin: 0; font-family: 'Noto Serif TC', serif; font-size: 18px; font-weight: 700; color: #2A2420;">站前新銳｜開放式住辦＋車位</h3>
+            <p style="margin: 0; font-size: 13.5px; color: #8A7E6C;">桃園市中壢區青心路｜距 A18 高鐵站約 6 分鐘</p>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; font-size: 13px; color: #6B6158;">
+              <span style="background: #F6F1E7; padding: 4px 10px; border-radius: 8px;">28.32 坪（含車位）</span>
+              <span style="background: #F6F1E7; padding: 4px 10px; border-radius: 8px;">開放式格局・1 衛 1 陽台</span>
+            </div>
+            <div style="margin-top: auto; display: flex; align-items: center; justify-content: space-between; padding-top: 14px; border-top: 1px solid #F0E9DC; gap: 10px; flex-wrap: wrap;">
+              <span style="font-family: 'Noto Serif TC', serif; font-weight: 900; font-size: 19px; color: var(--accent);">NT$ 1,398 萬</span>
+              <div style="display: flex; gap: 8px;">
+                <a href="https://sale.591.com.tw/home/house/detail/2/20983935.html" target="_blank" rel="noopener noreferrer" style="font-size: 13px; color: #2A2420; border: 1px solid #E6DCCB; padding: 7px 14px; border-radius: 999px; text-decoration: none; font-weight: 600; white-space: nowrap;">查看詳情</a>
+                <button type="button" onclick="shareLink('https://sale.591.com.tw/home/house/detail/2/20983935.html', '物件')" style="display: flex; align-items: center; gap: 6px; background: var(--accent); color: #FFFFFF; font-size: 13px; font-weight: 700; padding: 7px 14px; border-radius: 999px; border: none; cursor: pointer; white-space: nowrap;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.6" y1="10.6" x2="15.4" y2="6.4"></line><line x1="8.6" y1="13.4" x2="15.4" y2="17.6"></line></svg>分享物件</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 2 -->
+        <div style="background: #FFFFFF; border: 1px solid #E6DCCB; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column;">
+          <div role="img" aria-label="物件照片" style="position: relative; width: 100%; aspect-ratio: 4 / 3; background: #E4D9C6; display: flex; align-items: center; justify-content: center; color: #9C8F7A; font-size: 13px;">
+            [物件照片]
+            <span style="position: absolute; top: 12px; left: 12px; background: #F3E4DB; color: #A24F32; font-size: 12px; font-weight: 700; padding: 5px 12px; border-radius: 999px;">新上架</span>
+          </div>
+          <div style="padding: 20px; display: flex; flex-direction: column; gap: 10px; flex: 1;">
+            <h3 style="margin: 0; font-family: 'Noto Serif TC', serif; font-size: 18px; font-weight: 700; color: #2A2420;">湖景電梯別墅｜全新高檔裝潢</h3>
+            <p style="margin: 0; font-size: 13.5px; color: #8A7E6C;">桃園市觀音區上大五路｜近好市多</p>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; font-size: 13px; color: #6B6158;">
+              <span style="background: #F6F1E7; padding: 4px 10px; border-radius: 8px;">56.67 坪</span>
+              <span style="background: #F6F1E7; padding: 4px 10px; border-radius: 8px;">3 房 2 廳 4 衛 2 陽台</span>
+            </div>
+            <div style="margin-top: auto; display: flex; align-items: center; justify-content: space-between; padding-top: 14px; border-top: 1px solid #F0E9DC; gap: 10px; flex-wrap: wrap;">
+              <span style="font-family: 'Noto Serif TC', serif; font-weight: 900; font-size: 19px; color: var(--accent);">NT$ 2,950 萬</span>
+              <div style="display: flex; gap: 8px;">
+                <a href="https://sale.591.com.tw/home/house/detail/2/20849969.html" target="_blank" rel="noopener noreferrer" style="font-size: 13px; color: #2A2420; border: 1px solid #E6DCCB; padding: 7px 14px; border-radius: 999px; text-decoration: none; font-weight: 600; white-space: nowrap;">查看詳情</a>
+                <button type="button" onclick="shareLink('https://sale.591.com.tw/home/house/detail/2/20849969.html', '物件')" style="display: flex; align-items: center; gap: 6px; background: var(--accent); color: #FFFFFF; font-size: 13px; font-weight: 700; padding: 7px 14px; border-radius: 999px; border: none; cursor: pointer; white-space: nowrap;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.6" y1="10.6" x2="15.4" y2="6.4"></line><line x1="8.6" y1="13.4" x2="15.4" y2="17.6"></line></svg>分享物件</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 3 -->
+        <div style="background: #FFFFFF; border: 1px solid #E6DCCB; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column;">
+          <div role="img" aria-label="物件照片" style="position: relative; width: 100%; aspect-ratio: 4 / 3; background: #E4D9C6; display: flex; align-items: center; justify-content: center; color: #9C8F7A; font-size: 13px;">
+            [物件照片]
+            <span style="position: absolute; top: 12px; left: 12px; background: #E7ECDD; color: #4F5C3A; font-size: 12px; font-weight: 700; padding: 5px 12px; border-radius: 999px;">熱門</span>
+          </div>
+          <div style="padding: 20px; display: flex; flex-direction: column; gap: 10px; flex: 1;">
+            <h3 style="margin: 0; font-family: 'Noto Serif TC', serif; font-size: 18px; font-weight: 700; color: #2A2420;">和瑞捷星｜溫馨裝潢三房車位</h3>
+            <p style="margin: 0; font-size: 13.5px; color: #8A7E6C;">桃園市中壢區｜全聯正對面</p>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; font-size: 13px; color: #6B6158;">
+              <span style="background: #F6F1E7; padding: 4px 10px; border-radius: 8px;">44.19 坪</span>
+              <span style="background: #F6F1E7; padding: 4px 10px; border-radius: 8px;">3 房 2 廳 2 衛</span>
+            </div>
+            <div style="margin-top: auto; display: flex; align-items: center; justify-content: space-between; padding-top: 14px; border-top: 1px solid #F0E9DC; gap: 10px; flex-wrap: wrap;">
+              <span style="font-family: 'Noto Serif TC', serif; font-weight: 900; font-size: 19px; color: var(--accent);">NT$ 1,300 萬</span>
+              <div style="display: flex; gap: 8px;">
+                <a href="#" style="font-size: 13px; color: #2A2420; border: 1px solid #E6DCCB; padding: 7px 14px; border-radius: 999px; text-decoration: none; font-weight: 600; white-space: nowrap;">查看詳情</a>
+                <button type="button" onclick="shareLink(location.href.split('#')[0] + '#listings', '物件')" style="display: flex; align-items: center; gap: 6px; background: var(--accent); color: #FFFFFF; font-size: 13px; font-weight: 700; padding: 7px 14px; border-radius: 999px; border: none; cursor: pointer; white-space: nowrap;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.6" y1="10.6" x2="15.4" y2="6.4"></line><line x1="8.6" y1="13.4" x2="15.4" y2="17.6"></line></svg>分享物件</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 4 -->
+        <div style="background: #FFFFFF; border: 1px solid #E6DCCB; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column;">
+          <div role="img" aria-label="物件照片" style="position: relative; width: 100%; aspect-ratio: 4 / 3; background: #E4D9C6; display: flex; align-items: center; justify-content: center; color: #9C8F7A; font-size: 13px;">
+            [物件照片]
+            <span style="position: absolute; top: 12px; left: 12px; background: #E7ECDD; color: #4F5C3A; font-size: 12px; font-weight: 700; padding: 5px 12px; border-radius: 999px;">熱門</span>
+          </div>
+          <div style="padding: 20px; display: flex; flex-direction: column; gap: 10px; flex: 1;">
+            <h3 style="margin: 0; font-family: 'Noto Serif TC', serif; font-size: 18px; font-weight: 700; color: #2A2420;">鉅陞日和花園｜採光兩房車位</h3>
+            <p style="margin: 0; font-size: 13.5px; color: #8A7E6C;">桃園市中壢區青埔 A18｜近公七公園</p>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; font-size: 13px; color: #6B6158;">
+              <span style="background: #F6F1E7; padding: 4px 10px; border-radius: 8px;">34.16 坪</span>
+              <span style="background: #F6F1E7; padding: 4px 10px; border-radius: 8px;">2 房 2 廳 1 衛</span>
+            </div>
+            <div style="margin-top: auto; display: flex; align-items: center; justify-content: space-between; padding-top: 14px; border-top: 1px solid #F0E9DC; gap: 10px; flex-wrap: wrap;">
+              <span style="font-family: 'Noto Serif TC', serif; font-weight: 900; font-size: 19px; color: var(--accent);">NT$ 1,688 萬</span>
+              <div style="display: flex; gap: 8px;">
+                <a href="#" style="font-size: 13px; color: #2A2420; border: 1px solid #E6DCCB; padding: 7px 14px; border-radius: 999px; text-decoration: none; font-weight: 600; white-space: nowrap;">查看詳情</a>
+                <button type="button" onclick="shareLink(location.href.split('#')[0] + '#listings', '物件')" style="display: flex; align-items: center; gap: 6px; background: var(--accent); color: #FFFFFF; font-size: 13px; font-weight: 700; padding: 7px 14px; border-radius: 999px; border: none; cursor: pointer; white-space: nowrap;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.6" y1="10.6" x2="15.4" y2="6.4"></line><line x1="8.6" y1="13.4" x2="15.4" y2="17.6"></line></svg>分享物件</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 5 -->
+        <div style="background: #FFFFFF; border: 1px solid #E6DCCB; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column;">
+          <div role="img" aria-label="物件照片" style="position: relative; width: 100%; aspect-ratio: 4 / 3; background: #E4D9C6; display: flex; align-items: center; justify-content: center; color: #9C8F7A; font-size: 13px;">
+            [物件照片]
+            <span style="position: absolute; top: 12px; left: 12px; background: #F3E4DB; color: #A24F32; font-size: 12px; font-weight: 700; padding: 5px 12px; border-radius: 999px;">新上架</span>
+          </div>
+          <div style="padding: 20px; display: flex; flex-direction: column; gap: 10px; flex: 1;">
+            <h3 style="margin: 0; font-family: 'Noto Serif TC', serif; font-size: 18px; font-weight: 700; color: #2A2420;">草漯重劃區｜大面寬建地＋建照</h3>
+            <p style="margin: 0; font-size: 13.5px; color: #8A7E6C;">桃園市觀音區草福段｜距福德宮站約 333 公尺</p>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; font-size: 13px; color: #6B6158;">
+              <span style="background: #F6F1E7; padding: 4px 10px; border-radius: 8px;">134.09 坪</span>
+              <span style="background: #F6F1E7; padding: 4px 10px; border-radius: 8px;">住宅用地｜附建照，可規劃 16 戶</span>
+            </div>
+            <div style="margin-top: auto; display: flex; align-items: center; justify-content: space-between; padding-top: 14px; border-top: 1px solid #F0E9DC; gap: 10px; flex-wrap: wrap;">
+              <span style="font-family: 'Noto Serif TC', serif; font-weight: 900; font-size: 19px; color: var(--accent);">NT$ 3,980 萬</span>
+              <div style="display: flex; gap: 8px;">
+                <a href="https://land.591.com.tw/sale/20996317" target="_blank" rel="noopener noreferrer" style="font-size: 13px; color: #2A2420; border: 1px solid #E6DCCB; padding: 7px 14px; border-radius: 999px; text-decoration: none; font-weight: 600; white-space: nowrap;">查看詳情</a>
+                <button type="button" onclick="shareLink('https://land.591.com.tw/sale/20996317', '物件')" style="display: flex; align-items: center; gap: 6px; background: var(--accent); color: #FFFFFF; font-size: 13px; font-weight: 700; padding: 7px 14px; border-radius: 999px; border: none; cursor: pointer; white-space: nowrap;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.6" y1="10.6" x2="15.4" y2="6.4"></line><line x1="8.6" y1="13.4" x2="15.4" y2="17.6"></line></svg>分享物件</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" style="background: #F3ECE0; padding: 72px 0;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; gap: 56px; flex-wrap: wrap; align-items: center;">
+      <div style="flex: 1 1 380px; min-width: 280px;">
+        <div style="position: relative; width: 100%; border-radius: 24px; overflow: hidden; border: 1px solid #D8CDB9;">
+          <img src="assets/images/jen-yaqi.png" alt="詹雅淇，宅宅好生活創辦人" style="width: 100%; display: block; object-fit: cover;">
+          <div style="position: absolute; left: 16px; bottom: 16px; background: rgba(42,36,32,0.78); color: #FBF7F1; padding: 10px 16px; border-radius: 14px; display: flex; flex-direction: column; gap: 2px;">
+            <span style="font-family: 'Noto Serif TC', serif; font-weight: 700; font-size: 15px;">詹雅淇</span>
+            <span style="font-size: 12px; color: #D8CFC0;">宅宅好生活 創辦人</span>
+          </div>
+        </div>
+      </div>
+      <div style="flex: 1 1 420px; min-width: 280px; display: flex; flex-direction: column; gap: 18px;">
+        <h2 style="margin: 0; font-family: 'Noto Serif TC', serif; font-weight: 700; font-size: 28px; color: #2A2420;">關於宅宅好生活</h2>
+        <p style="margin: 0; font-size: 16px; line-height: 1.85; color: #524A42;">🏡 宅宅好生活｜陪你選好房，也選生活。不只選房，更懂你找到理想日常——無論自住、換屋、投資或資產規劃，用心陪你把每一次選擇都走得安心。</p>
+        <div style="display: flex; gap: 28px; flex-wrap: wrap; margin-top: 8px;">
+          <div style="display: flex; flex-direction: column; gap: 8px; min-width: 110px;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+            <span style="font-size: 14px; font-weight: 700; color: #2A2420;">用心挑選好宅</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px; min-width: 110px;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg>
+            <span style="font-size: 14px; font-weight: 700; color: #2A2420;">站在你的角度</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px; min-width: 110px;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3z"></path><path d="M9 12l2 2 4-4"></path></svg>
+            <span style="font-size: 14px; font-weight: 700; color: #2A2420;">安心成家助伴</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px; min-width: 110px;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5 10v9h14v-9"></path><path d="M9 19v-5h6v5"></path></svg>
+            <span style="font-size: 14px; font-weight: 700; color: #2A2420;">打造理想生活</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section style="background: #5E6B47; padding: 56px 0;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <h2 style="margin: 0; font-family: 'Noto Serif TC', serif; font-weight: 700; font-size: 24px; color: #FBF7F1;">歡迎加入，一起打造我們的好生活</h2>
+        <p style="margin: 0; font-size: 14.5px; color: #E2E6D7;">青埔買房、看房，或單純想聊聊這區的發展，都歡迎私訊或加 LINE 找我！</p>
+      </div>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="tel:0922912277" style="background: #FBF7F1; color: #2A2420; padding: 13px 26px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 14.5px; white-space: nowrap;">0922-912-277</a>
+        <a href="https://line.me/ti/p/bMkuPFaFp9" target="_blank" rel="noopener noreferrer" style="background: transparent; border: 1.5px solid #D8E0CB; color: #FBF7F1; padding: 13px 26px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 14.5px; white-space: nowrap;">加 LINE 好友</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" style="background: #2A2420; color: #EDE6D8;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 56px 24px 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px;">
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="width: 38px; height: 38px; border-radius: 10px; background: var(--accent); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Noto Serif TC', serif; font-weight: 700; font-size: 17px;">宅</div>
+          <span style="font-family: 'Noto Serif TC', serif; font-weight: 700; font-size: 17px; color: #FBF7F1;">宅宅好生活</span>
+        </div>
+        <p style="margin: 0; font-size: 13.5px; line-height: 1.8; color: #B9AF9E; max-width: 260px;">陪你選好房，也選生活。歡迎加入，一起打造我們的好生活。</p>
+        <div style="display: flex; gap: 10px; margin-top: 4px;">
+          <a href="https://www.facebook.com/groups/2076028257121447" target="_blank" rel="noopener noreferrer" aria-label="Facebook 社團" style="width: 38px; height: 38px; border-radius: 50%; background: #3A332C; display: flex; align-items: center; justify-content: center; color: #EDE6D8; text-decoration: none;">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+          <a href="https://line.me/ti/p/bMkuPFaFp9" target="_blank" rel="noopener noreferrer" aria-label="LINE" style="width: 38px; height: 38px; border-radius: 50%; background: #3A332C; display: flex; align-items: center; justify-content: center; color: #EDE6D8; text-decoration: none;">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v10H9l-4 4V5z"></path></svg>
+          </a>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <span style="font-size: 14px; font-weight: 700; color: #FBF7F1;">快速連結</span>
+        <a href="#fb-posts" style="font-size: 13.5px; color: #B9AF9E; text-decoration: none;">社團分享</a>
+        <a href="#listings" style="font-size: 13.5px; color: #B9AF9E; text-decoration: none;">物件分享</a>
+        <a href="#about" style="font-size: 13.5px; color: #B9AF9E; text-decoration: none;">關於我們</a>
+        <a href="#contact" style="font-size: 13.5px; color: #B9AF9E; text-decoration: none;">聯絡我們</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <span style="font-size: 14px; font-weight: 700; color: #FBF7F1;">聯絡方式</span>
+        <a href="tel:0922912277" style="font-size: 13.5px; color: #B9AF9E; text-decoration: none;">詹雅淇 Carol｜0922-912-277</a>
+        <a href="https://line.me/ti/p/bMkuPFaFp9" target="_blank" rel="noopener noreferrer" style="font-size: 13.5px; color: #B9AF9E; text-decoration: none;">LINE 好友連結 ↗</a>
+        <span style="font-size: 13.5px; color: #B9AF9E;">有巢氏房屋 青埔A18高鐵加盟店</span>
+        <span style="font-size: 13.5px; color: #B9AF9E;">桃園市青埔・A18 高鐵站周邊</span>
+      </div>
+    </div>
+    <div style="border-top: 1px solid #3A332C;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 18px 24px; font-size: 12.5px; color: #8C8275;">© 2026 宅宅好生活. All rights reserved.</div>
+    </div>
+  </footer>
+
+</div>
+
+<div class="toast" id="toast">
+  <div style="background: #2A2420; color: #FBF7F1; padding: 14px 22px; border-radius: 999px; font-size: 14px; font-weight: 600; box-shadow: 0 10px 30px rgba(0,0,0,.2); white-space: nowrap;" id="toast-msg"></div>
+</div>
+
+<script>
+  var toastTimer;
+  function showToast(msg) {
+    var toast = document.getElementById('toast');
+    var toastMsg = document.getElementById('toast-msg');
+    toastMsg.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toast.classList.remove('show'); }, 2200);
+  }
+
+  function shareLink(url, label) {
+    if (navigator.share) {
+      navigator.share({ title: '宅宅好生活', url: url }).catch(function () {});
+      return;
+    }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(url).then(function () {
+        showToast(label + '連結已複製，快傳給朋友看看！');
+      }).catch(function () {
+        showToast('請手動複製連結：' + url);
+      });
+    } else {
+      showToast('請手動複製連結：' + url);
+    }
+  }
+</script>
+
+</body>
+</html>
